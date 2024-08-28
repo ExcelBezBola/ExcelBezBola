@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #chatbox-container {
+            width: 320px;
+            height: 500px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            border: 1px solid #ccc;
+        }
+        #chatbox-header {
+            background-color: #B22222;
+            color: white;
+            padding: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #profile-image {
+            width: 45px; /* ili veličina koju želiš */
+            height: 45px; /* ili veličina koju želiš */
+            border-radius: 50%;
+            margin-right: 30px;
+        }
+        #chatbox-header span {
+            flex-grow: 1;
+        }
+        #chatbox {
+            height: calc(100% - 90px);
+            padding: 10px;
+            overflow-y: auto;
+            background-color: white;
+            font-size: 14px;
+        }
+        #input-area {
+            display: flex;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+        #user-input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 2px solid #ccc;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        #send-button {
+            background-color: #B22222;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .user-message {
+            color: black;
+            margin: 5px 0;
+        }
+        .capitalia-message {
+            color: black;
+            margin: 5px 0;
+        }
+        .capitalia-message b {
+            color: #B22222;
+        }
+    </style>
+</head>
+<body>
+    <div id="chatbox-container">
+        <div id="chatbox-header">
+            <img src="me.jpg" alt="Foto" id="profile-image">
+            <span id="welcome-message"><b>Dobrodošli u Capitaliu!</b></span>
+            <button id="minimize-button">−</button>
+        </div>
+        <div id="chatbox"></div>
+        <div id="input-area">
+            <input type="text" id="user-input" placeholder="Unesite poruku...">
+            <button id="send-button"><b>Pošalji</b></button>
+        </div>
+    </div>
+    <script src="chatbox.js"></script>
+</body>
+</html>
